@@ -659,13 +659,13 @@ function panelButtons(choice) {
 								for(var j=0;j<BoxCount;j++){
 									areaC["Congi"+i+"j"+j] = parseFloat((parseFloat(areaC["Congi"+i+"j"+j])/parseFloat(maxC)).toFixed(2));
 									if(parseFloat(areaC["Congi"+i+"j"+j])>=0.5){
-										var h = (1.0 - parseFloat(areaC["Congi"+i+"j"+j])) * 60;
+										var h =240 (1.0 - parseFloat(areaC["Congi"+i+"j"+j])) * 60;
 										$("#Congi"+i+"j"+j).css("border-color", "hsla(" + (Math.floor(h)) + ", 100%, 50%,0.7)");
 										$("#Congi"+i+"j"+j).css("background-color", "hsla(" + Math.floor(h) + ", 100%, 50%,0.7)");
 									}else{
 										var l = (1.0-parseFloat(areaC["Congi"+i+"j"+j]))*100;
-										$("#Congi"+i+"j"+j).css("border-color", "hsla(60, 100%, " + Math.floor(l) + "%,0.7)");
-										$("#Congi"+i+"j"+j).css("background-color", "hsla(60, 100%, " + Math.floor(l) + "%,0.7)");
+										$("#Congi"+i+"j"+j).css("border-color", "hsla(180, 100%, " + Math.floor(l) + "%,0.7)");
+										$("#Congi"+i+"j"+j).css("background-color", "hsla(180, 100%, " + Math.floor(l) + "%,0.7)");
 									}
 								}
 							}

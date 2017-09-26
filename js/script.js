@@ -541,7 +541,7 @@ function panelButtons(choice) {
 								success: function(dataPL) {
 									var total=0;
 									for(var i=0; i<dataNODES["NumNodes"]; i++){
-										if(parseFloat(dataPL[i]["ll_Xcoord"])+parseFloat(dataNODES[dataPL[i]["node_name"]]["width"])>parseFloat(chipsetInfo["rowWidth"]) && dataNODES[dataPL[i]["node_name"]]["movetype"]!="terminal"){
+										if((parseFloat(dataPL[i]["ll_Xcoord"])+parseFloat(dataNODES[dataPL[i]["node_name"]]["width"])>parseFloat(chipsetInfo["rowWidth"])||(parseFloat(dataPL[i]["ll_Ycoord"])+parseFloat(dataNODES[dataPL[i]["node_name"]]["height"])>parseFloat(chipsetInfo["rowHeight"])*parseFloat(chipsetInfo["NumRows"]))) && dataNODES[dataPL[i]["node_name"]]["movetype"]!="terminal"){
 											$("#"+dataPL[i]["node_name"]).css("border", "1px solid #ff0000");
 											overflowarr.push(dataPL[i]["node_name"]);
 											total++;
